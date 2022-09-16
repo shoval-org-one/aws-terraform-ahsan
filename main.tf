@@ -1,3 +1,9 @@
+module "cloudflare-security-group" {
+  source  = "orzarchi/cloudflare-security-group/aws"
+  version = "1.0.5"
+  # insert the 1 required variable here
+}
+  
 resource "aws_db_instance" "3Tier_RDS_MySQL" {
   allocated_storage           = "${var.3Tier_RDS_MySQL_Allocated_Storage}"
   engine                      = "mysql"
