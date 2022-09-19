@@ -4,7 +4,7 @@ module "cloudflare-security-group" {
   # insert the 1 required variable here
 }
   
-resource "aws_db_instance" "3Tier_RDS_MySQL" {
+resource "aws_cloudwatch_log_group.flow_log" {
   allocated_storage           = "${var.3Tier_RDS_MySQL_Allocated_Storage}"
   engine                      = "mysql"
   storage_type                = "gp2"
