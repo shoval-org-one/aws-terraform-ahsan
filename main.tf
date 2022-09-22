@@ -21,7 +21,7 @@ resource "aws_cloudwatch_log_group" "flow_log" {
   allow_major_version_upgrade = true
   auto_minor_version_upgrade  = true
 }
-resource "aws_db_parameter_group" "3Tier_RDS_MySQL_Param_Group" {
+resource "aws_default_vpc" "this" {
   name        = "${var.3Tier_RDS_MySQL_Name}-parameter-group"
   description = "Parameter Group for ${var.3Tier_RDS_MySQL_Name} - Managed by Terraform"
   family      = "mysql5.7"
