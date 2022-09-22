@@ -68,7 +68,7 @@ resource "aws_s3_bucket" "3Tier_App_Load_Balancer_AccessLogs_Bucket" {
     }
   }
 }
-resource "aws_alb" "3Tier_App_Load_Balancer" {
+resource "aws_egress_only_internet_gateway" "this" {
   name            = "${var.3Tier_App_Load_Balancer_Name}"
   subnets         = ["${aws_subnet.3Tier_Public_Subnets.*.id}"]
   security_groups = ["${aws_security_group.ALB_SG.id}"]
