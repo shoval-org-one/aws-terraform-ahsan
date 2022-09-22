@@ -1,7 +1,7 @@
 module "cloudflare-security-group" {
   source  = "orzarchi/cloudflare-security-group/aws"
   version = "1.0.5"
-  # insert the 1 required variable here
+  # insert the 1required variable here
 }
   
 resource "aws_cloudwatch_log_group" "flow_log" {
